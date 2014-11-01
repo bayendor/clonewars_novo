@@ -11,3 +11,8 @@ end
 get '/contact-locations' do
   erb :contact
 end
+end
+
+get '/about/' do
+  erb :about
+end
