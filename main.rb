@@ -28,6 +28,10 @@ get '/my-account' do
   erb :my_account
 end
 
+get '/my-account/lost-password' do
+  erb :lost_password
+end
+
 not_found do
   erb :not_found
 end
