@@ -81,18 +81,18 @@ table td { font-family: "TradeGothicBold", Helvetica-Neue, Helvetica, sans-serif
 
 /* ------- Slider --------- */
 .panel-0{
-	background: #fff url('/wp-content/themes/mercor/images/hero_bg1.jpg') no-repeat center;
+	background: #fff url('/images/hero_bg1.jpg') no-repeat center;
 }
 .panel-1{
-	background: #fff url('/wp-content/themes/mercor/images/hero_bg_cherries.jpg') no-repeat center;
+	background: #fff url('/images/hero_bg_cherries.jpg') no-repeat center;
 }
 
 .panel-2{
-	background: #fff url('/wp-content/themes/mercor/images/hero_bg_honeybed.jpg') no-repeat center;
+	background: #fff url('/images/hero_bg_honeybed.jpg') no-repeat center;
 }
 
 .panel-3{
-	background: #fff url('/wp-content/themes/mercor/images/hero_bg_parchment.jpg') no-repeat center;
+	background: #fff url('/images/hero_bg_parchment.jpg') no-repeat center;
 }
 
 .textSlide .box{
