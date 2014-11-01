@@ -32,7 +32,7 @@ BEGIN CUSTOM STYLES
 	font-family: "AlternateGotNo1";
 	src:url('/wp-content/themes/mercor/fonts/AlternateGotNo1/alternategotno1d-webfont.eot');
 	src:url('/wp-content/themes/mercor/fonts/AlternateGotNo1/alternategotno1d-webfont.eot#iefix') format('eot'),
-	url('/wp-content/themes/mercor/fonts/AlternateGotNo1/alternategotno1d-webfont.ttf') format('truetype'),
+	url('fonts/alternategotno1d-webfont.ttf') format('truetype'),
 	url('/wp-content/themes/mercor/fonts/AlternateGotNo1/alternategotno1d-webfont.woff') format('woff'),
 	url('/wp-content/themes/mercor/fonts/AlternateGotNo1/alternategotno1d-webfont.svg') format('svg');
 	font-weight:400;font-style:normal
@@ -42,7 +42,7 @@ BEGIN CUSTOM STYLES
 	font-family: "FranklinGothic-Book";
 	src:url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-Book.eot');
 	src:url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-Book.eot#iefix') format('eot'),
-	url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-Book.ttf') format('truetype'),
+	url('fonts/FranklinGothic-Book.ttf') format('truetype'),
 	url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-Book.woff') format('woff'),
 	url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-Book.svg') format('svg');
 	font-weight:400;font-style:normal
@@ -53,7 +53,7 @@ BEGIN CUSTOM STYLES
 	font-family: "FranklinGothic-BookItalic";
 	src:url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-BookItalic.eot');
 	src:url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-BookItalic.eot#iefix') format('eot'),
-	url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-BookItalic.ttf') format('truetype'),
+	url('fonts/FranklinGothic-BookItalic.ttf') format('truetype'),
 	url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-BookItalic.woff') format('woff'),
 	url('/wp-content/themes/mercor/fonts/FranklinGothic/FranklinGothic-BookItalic.svg') format('svg');
 	font-weight:400;font-style:normalP
@@ -63,7 +63,7 @@ BEGIN CUSTOM STYLES
 	font-family: "TradeGothic";
 	src:url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic.eot');
 	src:url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic.eot#iefix') format('eot'),
-	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic.ttf') format('truetype'),
+	url('fonts/Trade%20Gothic.ttf') format('truetype'),
 	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic.woff') format('woff'),
 	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic.svg') format('svg');
 	font-weight:400;font-style:normal
@@ -73,7 +73,7 @@ BEGIN CUSTOM STYLES
 	font-family: "TradeGothicBold";
 	src:url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Bold.eot');
 	src:url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Bold.eot#iefix') format('eot'),
-	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Bold.ttf') format('truetype'),
+	url('fonts/Trade%20Gothic%20Bold.ttf') format('truetype'),
 	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Bold.woff') format('woff'),
 	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Bold.svg') format('svg');
 	font-weight:800;font-style:normal
@@ -83,7 +83,7 @@ BEGIN CUSTOM STYLES
 	font-family: "TradeGothicCondensed";
 	src:url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Condensed%20No.%2018.eot');
 	src:url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Condensed%20No.%2018.eot#iefix') format('eot'),
-	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Condensed%20No.%2018.ttf') format('truetype'),
+	url('fonts/Trade%20Gothic%20Condensed%20No.%2018.ttf') format('truetype'),
 	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Condensed%20No.%2018.woff') format('woff'),
 	url('/wp-content/themes/mercor/fonts/TradeGothic/Trade%20Gothic%20Condensed%20No.%2018.svg') format('svg');
 	font-weight:400;font-style:normal
@@ -2434,9 +2434,9 @@ h3#comments{position: absolute;  margin-top:-14px;z-index:9;padding-right:10px;}
 	outline: none !important;
 	padding: 10px;
 	margin: 0 0 15px 0;
-	background-color: #F8F8F8; 
+	background-color: #F8F8F8;
 	font-size:13px !important;
-	font-style: italic; 
+	font-style: italic;
 	border: 1px solid #F2F2F2;
 	border-bottom: 1px solid #D9D9D9;
 	box-sizing:border-box;
@@ -2445,17 +2445,17 @@ h3#comments{position: absolute;  margin-top:-14px;z-index:9;padding-right:10px;}
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	}
-	
+
 #contactform .ginput_container input, #contactform .ginput_container textarea{
 	width:100%;
 }
 
 /*Error messages override*/
-.gform_wrapper li.gfield.gfield_error, 
+.gform_wrapper li.gfield.gfield_error,
 .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
-	 background: none!important; 
-	 margin: 0px !important; 
-	 padding: 0!important; 
+	 background: none!important;
+	 margin: 0px !important;
+	 padding: 0!important;
 	 border: none!important;
 }
 
@@ -2463,7 +2463,7 @@ h3#comments{position: absolute;  margin-top:-14px;z-index:9;padding-right:10px;}
 	border: 1px solid #C89797;
 }
 
-.gform_wrapper .top_label .gfield_description.validation_message, 
+.gform_wrapper .top_label .gfield_description.validation_message,
 .gform_wrapper .gfield_description.validation_message{
 	padding: 0!important;
 }
