@@ -8,6 +8,11 @@ end
 get '/shop' do 
 	erb :shop
 end
+
+get '/shop/detail' do
+	erb :detail
+end
+
 get '/contact-locations' do
   erb :contact
 end
@@ -15,3 +20,5 @@ end
 get '/about/' do
   erb :about
 end
+
+
