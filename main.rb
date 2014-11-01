@@ -24,3 +24,12 @@ end
 get '/wholesale' do
   erb :wholesale
 end
+get '/my-account' do
+  erb :my_account
+end
+
+not_found do
+  erb :not_found
+end
+
+
