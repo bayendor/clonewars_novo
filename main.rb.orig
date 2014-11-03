@@ -9,7 +9,7 @@ get '/shop' do
 	erb :shop
 end
 
-get '/product-detail' do
+get '/shop/detail' do
 	erb :detail
 end
 
@@ -21,15 +21,13 @@ get '/about' do
   erb :about
 end
 
+<<<<<<< HEAD
 get '/wholesale' do
   erb :wholesale
 end
+=======
 get '/my-account' do
   erb :my_account
-end
-
-get '/lost-password' do
-  erb :lost_password
 end
 
 not_found do
@@ -37,3 +35,4 @@ not_found do
 end
 
 
+>>>>>>> Added not found and my account pages
