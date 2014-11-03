@@ -36,4 +36,6 @@ not_found do
   erb :not_found
 end
 
-
+get '/news-events/?' do
+  erb :news
+end
