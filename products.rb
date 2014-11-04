@@ -1,8 +1,6 @@
 require 'sequel'
 
-# DB = Sequel.sqlite('db/novocoffee.db')
-
-DB = Sequel.connect('postgres://David:@localhost/novocoffee')
+# DB = Sequel.connect('postgres://localhost/novocoffee')
 
 products = DB[:products]
 
