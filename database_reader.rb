@@ -32,11 +32,15 @@ class DatabaseReader
 
   end
 
-  def delete()
-    
+  def delete(id)
+    DB.run "DELETE FROM #{table_name} WHERE id = #{id}"
   end
 
-  def update()
+  def update(id, options)
+    changed = [:name, :region, :type, :description, :price, :img].select { |key| options[key] }
+    return if changed.empty?
+    set = changed.map { |key| "#{key} = '#{options[key]}'" }.join ","
+    DB.run "UPDATE #{table_name} SET #{set} where id = #{id}"
   end
 
   def add()
