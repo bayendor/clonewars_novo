@@ -420,7 +420,7 @@ a.monthly_subscription_orange{
 a.monthly_subscription_orange:after{
 	margin: -2px 0 0 20px;
 	position: absolute;
-	content: url('/wp-content/themes/mercor/images/big_arrow.png');
+	content: url('images/big_arrow.png');
 }
 
 a.allied_products_blue{
@@ -437,7 +437,7 @@ a.allied_products_blue{
 a.allied_products_blue:after{
 	margin: -2px 0 0 20px;
 	position: absolute;
-	content: url('/wp-content/themes/mercor/images/big_arrow.png');
+	content: url('images/big_arrow.png');
 }
 
 .blue:after{
@@ -677,7 +677,7 @@ a.monthly_subscription{
 a.monthly_subscription:after{
 	margin: -12px 0 0 30px;
 	position: absolute;
-	content: url('/wp-content/themes/mercor/images/big_arrow.png');
+/*  content: url('images/big_arrow.png');*/
 }
 
 
