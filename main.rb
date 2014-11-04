@@ -1,5 +1,18 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
+require 'sequel'
+
+# configure :development do
+#   DB = Sequel.sqlite('db/novocoffee.db')
+# end
+
+configure :development do
+  DB = Sequel.connect('postgres://localhost/novocoffee')
+end
+
+configure :production do
+  DB = Sequel.connect(ENV['DATABASE_URL'])
+end
 
 get '/:anything/' do |anything|
   redirect "/#{anything}"
@@ -17,11 +30,11 @@ get '/product-detail' do
 	erb :detail
 end
 
-get '/admin' do 
-  erb :admin  
+get '/admin' do
+  erb :admin
 end
 
-get '/edit-product' do 
+get '/edit-product' do
   erb :edit_product
 end
 
