@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 
+get '/:anything/' do |anything|
+  redirect "/#{anything}"
+end
+
 get '/' do
   erb :home
 end
@@ -24,6 +28,7 @@ end
 get '/wholesale' do
   erb :wholesale
 end
+
 get '/my-account' do
   erb :my_account
 end
