@@ -15,10 +15,11 @@ configure :production do
   DB = Sequel.connect(ENV['DATABASE_URL'])
 end
 
+<<<<<<< HEAD
 # get '/:anything/' do |anything|
 #   redirect "/#{anything}"
 # end
-
+=======
 helpers do
   def find_products
     DatabaseReader.new(:products).select_all
@@ -49,11 +50,24 @@ helpers do
   end
 end
 
+get '/:anything/' do |anything|
+  redirect "/#{anything}"
+end
+>>>>>>> added dynamic products to shop page. new helper methods in main.
+
 get '/' do
   erb :home
 end
 
+<<<<<<< HEAD
 get '/shop/?' do
+  @african_products = DatabaseReader.new(:products).select_all_by_region("Africa")
+  @central_am_products = DatabaseReader.new(:products).select_all_by_region("Central America")
+  @south_am_products = DatabaseReader.new(:products).select_all_by_region("South America")
+  @pacific_products = DatabaseReader.new(:products).select_all_by_region("Pacific")
+	erb :shop
+=======
+get '/shop' do
 	erb :shop, locals: {african_products: find_african_products, 
                       central_am_products: find_central_am_products,
                       south_am_products: find_central_am_products,
@@ -61,6 +75,7 @@ get '/shop/?' do
                       alternative_products: find_alternative_products,
                       accessories: find_accessories
                     }
+>>>>>>> added dynamic products to shop page. new helper methods in main.
 end
 
 get '/:id/detail/?' do |id|
