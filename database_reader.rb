@@ -1,7 +1,7 @@
 require 'sequel'
 
 class DatabaseReader
-  DB = Sequel.sqlite('db/novocoffee.db')
+  # DB = Sequel.sqlite('db/novocoffee.db')
 
   attr_reader :table_name
   def initialize(table_name)
