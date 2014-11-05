@@ -22,30 +22,27 @@
                   <div class="usercontent"><div class="woocommerce">
 <div class="wooLogin">
 <h2>Edit Product</h2>
-    <form action="/edit-product" method="POST" class="login">
+<%= @product.inspect %>
+    <form action="/<%= @product[:id] %>/edit-product" method="POST" class="login">
     <input type="hidden" name="_method" value="PUT" />
-      <input type="text" class="input-text" name="product[title]" value="Product name" />
-      <input type="text" class="input-text" name="product[price]" value="Product price" />
-      <select name='product[category]' class="country_to_state country_select" >
-        <option value="espresso">Espresso</option>
-        <option value="decaf">Decaf</option>
-        <option value="blend">Blend</option>
-        <option value="regular">Regular</option>
-        <option value="accessory">Accessory</option>
+      <input type="text" class="input-text" name="product[name]" value="<%= @product[:name] %>" />
+      <input type="text" class="input-text" name="product[price]" value="<%= @product[:price] %>" />
+      <select name='product[type]' class="country_to_state country_select" >
+        <% %w(Espresso Decaf Blend Regular Accessory Subscription).each do |option| %>
+        <option value="<%= option.downcase %>" <%= option.downcase == @product[:type] ? "selected" : "" %>><%= option %></option>
+        <% end %>
       </select>
       <select name='product[region]' class="country_to_state country_select">
-        <option value="Africa">Africa</option>
-        <option value="Central America">Central America</option>
-        <option value="South America">South America</option>
-        <option value="Pacific">Pacific</option>
-        <option value="blend">Blend</option>
+        <% ["Africa", "Central America", "South America", "Pacific", "Blend"].each do |option| %>
+        <option value="<%= option %>" <%= option == @product[:region] ? "selected" : "" %>><%= option %></option>
+        <% end %>
       </select>
-      <textarea class="form-control" rows="5" class="input-text" id="order_comments" name="product[description]">Product description</textarea>
-      <form action="" method="POST" enctype="multipart/form-data">
+      <textarea class="form-control" rows="5" class="input-text" id="order_comments" name="product[description]"><%= @product[:description] %></textarea>
+      <!-- <form action="" method="POST" enctype="multipart/form-data">
             <input type="file" name="file">
             <input type="submit" value="Upload image">
-        </form>
-      <input type='submit' class=""/>
+        </form> -->
+      <input type='submit' class="" value="Submit"/>
     </form>
 <div class="clear"></div>
 </p></form>
