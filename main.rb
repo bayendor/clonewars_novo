@@ -2,52 +2,20 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sequel'
 require_relative 'database_reader'
+require_relative 'novo_helpers'
+
 
 configure :development do
   DB = Sequel.sqlite('db/novocoffee.db')
+  PRODUCTS = DatabaseReader.new(:products)
 end
 
 configure :production do
   DB = Sequel.connect(ENV['DATABASE_URL'])
+  PRODUCTS = DatabaseReader.new(:products)
 end
 
-helpers do
-  def find_products
-    DatabaseReader.new(:products).select_all
-  end
-
-  def find_african_products
-    DatabaseReader.new(:products).select_all_by_region("Africa")
-  end
-
-  def find_central_am_products
-    DatabaseReader.new(:products).select_all_by_region("Central America")
-  end
-
-  def find_south_am_products
-    DatabaseReader.new(:products).select_all_by_region("South America")
-  end
-
-  def find_pacific_products
-    DatabaseReader.new(:products).select_all_by_region("Pacific")
-  end
-
-  def find_alternative_products
-    DatabaseReader.new(:products).select_all_by_that_are_not("regular", "accessories", "subscription")
-  end
-
-  def find_accessories
-    DatabaseReader.new(:products).select_all_by_type("accessories")
-  end
-
-  def update_product(id, params)
-    DatabaseReader.new(:products).update(id, params)
-  end
-
-  def delete_product(id)
-    DatabaseReader.new(:products).delete(id)
-  end
-end
+helpers NovoHelpers
 
 before do
   @products             = find_products
