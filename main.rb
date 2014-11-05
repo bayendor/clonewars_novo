@@ -99,12 +99,13 @@ get '/subscriptions/?' do
 end
 
 get '/add_product/?' do 
+  protected!
   erb :add_product
 end
 
 post '/add_product/?' do
-  DatabaseReader.new(:products).add(params['product'])
-  redirect '/'
+  PRODUCTS.add(params['product'])
+  redirect '/admin'
 end
 # private
 
