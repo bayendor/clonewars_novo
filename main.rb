@@ -33,7 +33,7 @@ helpers do
   end
 
   def find_alternative_products
-    DatabaseReader.new(:products).select_all_by_that_are_not("regular")
+    DatabaseReader.new(:products).select_all_by_that_are_not("regular", "accessories", "subscription")
   end
 
   def find_accessories
@@ -113,6 +113,11 @@ put '/:id/edit-product/?' do |id|
   protected!
   update_product(id, params['product'])
   redirect '/admin'
+end
+
+get '/subscriptions/?' do 
+  @subscriptions = DatabaseReader.new(:products).select_all_by_type("subscription")
+  erb :subscriptions
 end
 
 # private
