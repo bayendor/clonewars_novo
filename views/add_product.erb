@@ -1,0 +1,52 @@
+<body class="page page-id-5184 page-parent page-template-default woocommerce-account woocommerce-page">
+
+  <%= erb :_navigation %>
+
+<div class = "outerpagewrap">
+  <div class="pagewrap" style="background: #332822 url(https://novocoffee.com/images/hero_slim_wholesale.jpg) no-repeat center center;">
+    <div class="pagecontent">
+      <div class="pagecontentContent">
+        <h1>Site Admin</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mainwrap">
+  <div id="main" class="clearfix">
+  <div class="pad"></div>
+          <div class="content fullwidth">
+              <div class="postcontent">
+                <div class="posttext">
+                  <div class="usercontent"><div class="woocommerce">
+<div class="wooLogin">
+<h2>Add Product</h2>
+    <form action="/add_product" method="POST" class="login">
+      <input type="text" class="input-text" name="product[name]" placeholder="Enter Title" />
+      <input type="text" class="input-text" name="product[price]" placeholder="Enter Price" />
+      <select name='product[type]' class="country_to_state country_select" >
+        <% %w(Espresso Decaf Blend Regular Accessory Subscription).each do |option| %>
+        <option value="<%= option.downcase %>"<%= option.downcase %>><%= option %></option>
+        <% end %>
+      </select>
+      <select name='product[region]' class="country_to_state country_select">
+        <% ["Africa", "Central America", "South America", "Pacific", "Blend"].each do |option| %>
+        <option value="<%= option %>" <%= option %>><%= option %></option>
+        <% end %>
+      </select>
+      <textarea class="form-control" rows="5" class="input-text" id="order_comments" name="product[description]"></textarea>
+      <!-- <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload image">
+        </form> -->
+      <input type='submit' class="" value="Submit"/>
+    </form>
+<div class="clear"></div>
+</p></form>
+</p></div>
+</div>
+</div>
+                </div>
+              </div>
+          </div>
+  </div>
+</div>
