@@ -420,7 +420,7 @@ a.monthly_subscription_orange{
 a.monthly_subscription_orange:after{
 	margin: -2px 0 0 20px;
 	position: absolute;
-	content: url('images/big_arrow.png');
+	content: url('/images/big_arrow.png');
 }
 
 a.allied_products_blue{
