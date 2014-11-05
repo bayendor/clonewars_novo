@@ -13,15 +13,15 @@ class DatabaseReader
   end
 
   def select_by_name(name)
-    DB["SELECT * FROM #{table_name} WHERE name = \"#{name}\""].first
+    DB["SELECT * FROM #{table_name} WHERE name = '#{name}'"].first
   end
 
   def select_by_region(region)
-    DB["SELECT * FROM #{table_name} WHERE region = \"#{region}\""].first
+    DB["SELECT * FROM #{table_name} WHERE region = '#{region}'"].first
   end
 
   def select_by_type(type)
-    DB["SELECT * FROM #{table_name} WHERE type = \"#{type}\""].first
+    DB["SELECT * FROM #{table_name} WHERE type = '#{type}'"].first
   end
 
   def random(num)
@@ -29,7 +29,6 @@ class DatabaseReader
   end
 
   def all_sizes(product_name)
-
   end
 
   def delete(id)
@@ -37,12 +36,22 @@ class DatabaseReader
   end
 
   def update(id, options)
-    changed = [:name, :region, :type, :description, :price, :img].select { |key| options[key] }
+    changed = columns.select { |key| options[key] }
     return if changed.empty?
     set = changed.map { |key| "#{key} = '#{options[key]}'" }.join ","
     DB.run "UPDATE #{table_name} SET #{set} where id = #{id}"
   end
 
-  def add()
+  def add(options)
+    values = columns.map { |column| "'#{options[column]}'" }
+    DB.run "INSERT INTO #{table_name} (#{columns.join ","}) VALUES (#{values.join ","})"
+  end
+
+  def columns
+    @columns || [:name, :region, :type, :description, :price, :img]
+  end
+
+  def set_columns(columns)
+    @columns = columns
   end
 end
