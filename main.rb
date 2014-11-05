@@ -43,6 +43,10 @@ helpers do
   def update_product(id, params)
     DatabaseReader.new(:products).update(id, params)
   end
+
+  def delete_product(id)
+    DatabaseReader.new(:products).delete(id)
+  end
 end
 
 before do
@@ -115,7 +119,13 @@ put '/:id/edit-product/?' do |id|
   redirect '/admin'
 end
 
-get '/subscriptions/?' do 
+delete '/:id/?' do |id|
+  protected!
+  delete_product(id)
+  redirect '/admin'
+end
+
+get '/subscriptions/?' do
   @subscriptions = DatabaseReader.new(:products).select_all_by_type("subscription")
   erb :subscriptions
 end
