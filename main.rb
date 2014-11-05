@@ -52,6 +52,7 @@ before do
 end
 
 get '/' do
+  @featured_products = DatabaseReader.new(:products).random(3)
   erb :home
 end
 
@@ -61,6 +62,7 @@ end
 
 get '/:id/detail/?' do |id|
   @product = DatabaseReader.new(:products).select_by_id(id)
+  @featured_products = DatabaseReader.new(:products).random(3)
 	erb :detail
 end
 
@@ -70,7 +72,7 @@ get '/admin/?' do
 end
 
 get '/:id/edit/?' do |id|
-  @product = DatabaseReader.new(:products).select_by_id(id.to_i)
+  @product = DatabaseReader.new(:products).select_by_id(id)
   erb :edit_product
 end
 
