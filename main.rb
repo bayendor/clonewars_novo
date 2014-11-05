@@ -15,9 +15,9 @@ configure :production do
   DB = Sequel.connect(ENV['DATABASE_URL'])
 end
 
-get '/:anything/' do |anything|
-  redirect "/#{anything}"
-end
+# get '/:anything/' do |anything|
+#   redirect "/#{anything}"
+# end
 
 get '/' do
   erb :home
