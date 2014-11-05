@@ -76,64 +76,42 @@
 	</div>
 </div>
 	</div>
-</div>
+
 				<div class="homeRacent">
-					<div class="titleborder"></div>
+				<div class="titleborder">
+				</div>
 					<h2 class="section_title">Featured <span>Products</span></h2>
 					<div id="homeRecent" class="productRH">
 					<ul id="productR" class="productR">
-												<li><div class="one_third" >								<a href="http://novocoffee.com/product/hartmann-honey/" title="Hartmann Honey">
-									<div class="recentimage">
-										<div class="image">
-											<div class="loading"></div>
-											<img src="/images/HarmannHoney.png" >										</div>
+
+						<% @featured_products.each do |product| %>
+						<li>
+							<div class="one_third" >
+							<a href="/<%= product[:id] %>/detail">
+								<div class="recentimage">
+									<div class="image">
+										<div class="loading">
+										</div>
+										<img src="/images/<%= product[:img] %>">										
 									</div>
-								</a>
+								</div>
+							</a>
 								<div class="recentdescription">
-																		<h3><a href="http://novocoffee.com/product/hartmann-honey/" title="Hartmann Honey">Hartmann Honey</a></h3>
-									<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;15</span></span></h3>
+									<h3><a href="/<%= product[:id] %>/detail"><%= product[:name] %></a></h3>
+									<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
 								</div>
 								<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/hartmann-honey/" rel="nofollow" data-product_id="6541" class="add_to_cart_button button product_type_variable">View Details</a>
-</div>
-							</div>
-						<div class="one_third" >								<a href="http://novocoffee.com/product/ojo-de-agua-2/" title="Ojo de Agua">
-									<div class="recentimage">
-										<div class="image">
-											<div class="loading"></div>
-											<img src="/images/OjoDeAgua.png" >										</div>
-									</div>
-								</a>
-								<div class="recentdescription">
-																		<h3><a href="http://novocoffee.com/product/ojo-de-agua-2/" title="Ojo de Agua">Ojo de Agua</a></h3>
-									<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;14</span></span></h3>
+									<a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="6541" class="add_to_cart_button button product_type_variable">View Details</a>
 								</div>
-								<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/ojo-de-agua-2/" rel="nofollow" data-product_id="7434" class="add_to_cart_button button product_type_variable">View Details</a>
-</div>
 							</div>
-						<div class="one_third last" >								<a href="http://novocoffee.com/product/kiamwangi/" title="Kiamwangi">
-									<div class="recentimage">
-										<div class="image">
-											<div class="loading"></div>
-											<img src="/images/Kiamwangi1.png" >										</div>
-									</div>
-								</a>
-								<div class="recentdescription">
-																		<h3><a href="http://novocoffee.com/product/kiamwangi/" title="Kiamwangi">Kiamwangi</a></h3>
-									<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;20</span></span></h3>
-								</div>
-								<div class="recentCart">
+							<% end %>
 
-	<a href="http://novocoffee.com/product/kiamwangi/" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
-</div>
-							</div>
-												</ul>
+					</ul>
 					</div>
 				</div>
-				<div class="clear"></div>
+				<div class="clear">
+				</div>
+
 			</div>
 		</div>
 	</div>

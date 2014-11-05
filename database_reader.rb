@@ -37,7 +37,6 @@ class DatabaseReader
     DB["SELECT * FROM #{table_name} WHERE id = '#{id}'"].first
   end
 
-
   def random(num)
     select_all.sample(num)
   end
