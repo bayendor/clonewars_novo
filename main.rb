@@ -39,6 +39,10 @@ helpers do
   def find_accessories
     DatabaseReader.new(:products).select_all_by_type("accessories")
   end
+
+  def update_product(id, params)
+    DatabaseReader.new(:products).update(id, params)
+  end
 end
 
 before do
@@ -72,6 +76,7 @@ get '/admin/?' do
 end
 
 get '/:id/edit/?' do |id|
+  protected!
   @product = DatabaseReader.new(:products).select_by_id(id)
   erb :edit_product
 end
@@ -102,6 +107,12 @@ end
 
 get '/news-events/?' do
   erb :news
+end
+
+put '/:id/edit-product/?' do |id|
+  protected!
+  update_product(id, params['product'])
+  redirect '/admin'
 end
 
 # private
