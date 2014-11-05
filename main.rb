@@ -7,17 +7,9 @@ configure :development do
   DB = Sequel.sqlite('db/novocoffee.db')
 end
 
-# configure :development do
-#   DB = Sequel.connect('postgres://localhost/novocoffee')
-# end
-
 configure :production do
   DB = Sequel.connect(ENV['DATABASE_URL'])
 end
-
-# get '/:anything/' do |anything|
-#   redirect "/#{anything}"
-# end
 
 helpers do
   def find_products
@@ -49,7 +41,7 @@ helpers do
   end
 end
 
-before do 
+before do
   @products             = find_products
   @african_products     = find_african_products
   @central_am_products  = find_central_am_products
