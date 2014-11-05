@@ -5,7 +5,7 @@
 				<div class="pagecontent">
 			<div class="pagecontentContent">
 				<h1><a href="/shop/">Shop</a></h1>
-				<p><a href="/">Novo Coffee</a> » Espresso Novo Mug</p>
+				<p><a href="/">Novo Coffee</a> » <%= @product[:name] %></p>
 			</div>
 		</div>
 	</div>
@@ -18,7 +18,7 @@
 <div class="imagesSPAll">
 	<div class="images imagesSP">
 	<script type="text/javascript" src="js/detail_page.js"></script>
-	<a href = "images/mug.jpg" title="Espresso Novo Mug" rel ="prettyPhoto" ><img class="check" src="images/mug.jpg" /></a>
+	<a href = "/images/<%= @product[:img] %>" rel ="prettyPhoto" ><img class="check" src="/images/<%= @product[:img] %>" /></a>
 		</div>
 		<div class="thumbnails"></div>
 </div>
@@ -26,42 +26,53 @@
 	<div class="rightContentSP">
 
 	<div class="titleSP">
-		<h2>Espresso Novo Mug</h2>
+		<h2><%= @product[:name] %></h2>
 	</div>
-		<div class="descriptionSP short">
-		<p>Imported from expert Italian porcelain manufacturer d’Ancap and crafted outside of Sona, Italy, these highly durable and exceptionally lovely mugs feature the Espresso Novo logo.</p>
-<p>d’ANCAP is recognized as one of the finest producers of coffee and espresso vessels in the world. These mugs are paired with a saucer and are available in traditional espresso (75 mL or ~2.5 oz), cappuccino (180 mL or ~6 oz), and latte (350 mL or ~12 oz) sizes.</p>
+	<div class="descriptionSP short">
+		<p><%= @product[:description] %></p>
 	</div>
-	<script type="text/javascript">
-	if ( ! product_variations )
-		var product_variations = new Array();
 
-    product_variations[ 6877 ] = [{"variation_id":"6889","attributes":{"attribute_pa_size":"75-ml"},"image_src":"","image_link":"","image_title":"","image_alt":"","price_html":"<span class=\"price\"><span class=\"amount\">&#36;11<\/span><\/span>","availability_html":"","sku":"","weight":"1.00 lbs","dimensions":"6 x 6 x 4 in","min_qty":1,"max_qty":0,"backorders_allowed":false,"is_in_stock":true,"is_downloadable":false,"is_virtual":false,"is_sold_individually":"no"},{"variation_id":"6890","attributes":{"attribute_pa_size":"180-ml"},"image_src":"","image_link":"","image_title":"","image_alt":"","price_html":"<span class=\"price\"><span class=\"amount\">&#36;13<\/span><\/span>","availability_html":"","sku":"","weight":"2.00 lbs","dimensions":"6 x 6 x 4 in","min_qty":1,"max_qty":0,"backorders_allowed":false,"is_in_stock":true,"is_downloadable":false,"is_virtual":false,"is_sold_individually":"no"},{"variation_id":"6891","attributes":{"attribute_pa_size":"350-ml"},"image_src":"","image_link":"","image_title":"","image_alt":"","price_html":"<span class=\"price\"><span class=\"amount\">&#36;15<\/span><\/span>","availability_html":"","sku":"","weight":"2.00 lbs","dimensions":"6 x 6 x 4 in","min_qty":1,"max_qty":0,"backorders_allowed":false,"is_in_stock":true,"is_downloadable":false,"is_virtual":false,"is_sold_individually":"no"}];
-</script>
 <div class="cartPS">
 	<div id="product_box">
 		<form action="/product/espresso-novo-mug-12-oz/?add-to-cart=6877" class="variations_form" method="post" enctype='multipart/form-data' data-product_id="6877">
 			<div class="variations">
-											<div class="rowSP">
-							<div class="label"><label for="pa_size">Size</label></div>
-							<div class="value"><select id="pa_size" name="attribute_pa_size">
-								<option value="">Choose an option&hellip;</option>
-								<option value="180-ml" >180 mL</option><option value="350-ml"  selected='selected'>350 mL</option><option value="75-ml" >75 mL</option>							</select> </div>
-						</div>
-			        				</tbody>
-			</div>
-			<div class="single_variation_wrap" style="display:none;">
-				<div class="single_variation"></div>
-				<div class="variations_button">
-					<input type="hidden" name="variation_id" value="" />
+				<div class="rowSP">
+					<div class="label"><label for="pa_size">Size</label>
+					</div>
+					<div class="value">
+						<select id="pa_size" name="attribute_pa_size">
+							<option value="" selected='selected'>Choose an option&hellip;</option>
+							<option value="180-ml" >180 mL</option>
+							<option value="350-ml" >350 mL</option>
+							<option value="75-ml" >75 mL</option>							
+						</select> 
+					</div>
+				</div>	
+
+				<div class="rowSP">
+					<div class="label"><label for="pa_size">Price</label>
+					</div>
+					<div class="value">
+						<p>$<%= sprintf("%.2f", @product[:price]/100.0) %></p>	
+					</div>
+				</div>
+
+				<div class="rowSP">
+					<div class="label"><label for="pa_size">Quantity</label>
+					</div>
 					<div class="quantity">
-<input  step="1" min="" max="" name="quantity" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12" /></div>					<button type="submit" class="single_add_to_cart_button button alt">Add to cart</button>
+						<input  step="1" min="" max="" name="quantity" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12" />
+					</div>					
+				</div>
+				<div class="rowSP">
+					<button type="submit" class="single_add_to_cart_button button">Add to cart</button>
 				</div>
 			</div>
-			<div><input type="hidden" name="product_id" value="6877" /></div>
 		</form>
+	</div>
+</div>	
 		<div class="messageSP">
-					</div>
+		</div>
 	</div>
 </div>
 	</div>

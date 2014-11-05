@@ -64,7 +64,7 @@ get '/shop/?' do
 end
 
 get '/:id/detail/?' do |id|
-  @idea = DatabaseReader.new(:products).select_by_type(id.to_i)
+  @product = DatabaseReader.new(:products).select_by_type(id.to_i)
 	erb :detail
 end
 
@@ -75,7 +75,7 @@ get '/admin/?' do
 end
 
 get '/:id/edit/?' do |id|
-  @idea = DatabaseReader.new(:products).select_by_type(id.to_i)
+  @product = DatabaseReader.new(:products).select_by_type(id.to_i)
   erb :edit_product
 end
 
