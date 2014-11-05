@@ -27,6 +27,10 @@ module NovoHelpers
     PRODUCTS.select_all_by_type("accessories")
   end
 
+  def find_by_id(id)
+    PRODUCTS.select_by_id(id)
+  end
+
   def update_product(id, params)
     PRODUCTS.update(id, params)
   end

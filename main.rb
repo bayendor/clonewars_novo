@@ -28,7 +28,7 @@ before do
 end
 
 get '/' do
-  @featured_products = DatabaseReader.new(:products).random(3)
+  @featured_products = PRODUCTS.random(3)
   erb :home
 end
 
@@ -37,8 +37,8 @@ get '/shop/?' do
 end
 
 get '/:id/detail/?' do |id|
-  @product = DatabaseReader.new(:products).select_by_id(id)
-  @featured_products = DatabaseReader.new(:products).random(3)
+  @product = find_by_id(id)
+  @featured_products = PRODUCTS.random(3)
 	erb :detail
 end
 
@@ -49,7 +49,7 @@ end
 
 get '/:id/edit/?' do |id|
   protected!
-  @product = DatabaseReader.new(:products).select_by_id(id)
+  @product = find_by_id(id)
   erb :edit_product
 end
 
@@ -94,7 +94,7 @@ delete '/:id/?' do |id|
 end
 
 get '/subscriptions/?' do
-  @subscriptions = DatabaseReader.new(:products).select_all_by_type("subscription")
+  @subscriptions = PRODUCTS.select_all_by_type("subscription")
   erb :subscriptions
 end
 
