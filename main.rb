@@ -21,7 +21,7 @@ before do
   @products             = find_products
   @african_products     = find_african_products
   @central_am_products  = find_central_am_products
-  @south_am_products    = find_central_am_products
+  @south_am_products    = find_south_am_products
   @pacific_products     = find_pacific_products
   @alternative_products = find_alternative_products
   @accessories          = find_accessories
@@ -94,7 +94,7 @@ delete '/:id/?' do |id|
 end
 
 get '/subscriptions/?' do
-  @subscriptions = PRODUCTS.select_all_by_type("subscription")
+  @subscriptions = find_subscriptions
   erb :subscriptions
 end
 
