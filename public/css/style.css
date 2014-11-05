@@ -1133,7 +1133,7 @@ li.product.last {margin-right:0;}
 .cartWrapper {position:relative;float:right;  cursor:pointer;padding:0 10px 5px 10px !important;-webkit-border-radius: 5px;
 	margin-left:-20px;}
 .cartHolder{position: relative; width:100%; margin:0; background:#f15c2e;padding-top:1px;border-top: 3px solid #f15c2e;}
-.cartHolder a {/*font-weight:bold;float:right;*/}.cart{display:block;width:20px; height:30px;background: url(images/cart.png) no-repeat  0px 2px; padding-left: 30px;  float:right; padding-top:4px;color:#fff !important;}
+.cartHolder a {/*font-weight:bold;float:right;*/}.cart{display:block;width:20px; height:30px;background: url(/images/cart.png) no-repeat  0px 2px; padding-left: 30px;  float:right; padding-top:4px;color:#fff !important;}
 .cart-contents{float:right;padding-left: 10px; padding-top:4px;color:#fff !important;}
 .top-nav{width: 960px;margin: 0 auto;height: 30px; }
 .top-nav a {color:#fff;font-size:12px;}
@@ -1160,7 +1160,7 @@ li.product.last {margin-right:0;}
  .total .amount {margin-right:20px}
  .cartTopDetails .product_list_widget .buttons a:hover {color:#fff !important;}
 .cartWrapper:hover .cartTopDetails{opacity:1;filter:alpha(opacity=100); height:auto; }
-.cartTopDetails li.empty.cart  {background: url(images/shopping-cart-big.png) no-repeat 10px 10px; padding:20px 0 0 60px;color:#2a2b2c !important;margin-bottom:0px !important;border:none;}
+.cartTopDetails li.empty.cart  {background: url(/images/shopping-cart-big.png) no-repeat 10px 10px; padding:20px 0 0 60px;color:#2a2b2c !important;margin-bottom:0px !important;border:none;}
 
 /* ***********************
 --------------------------------------
@@ -2762,7 +2762,7 @@ ul.cart_list li dl, ul.product_list_widget li dl {font-size:1em;border-left:none
 }
  .widget_shopping_cart  .buttons {text-align: left;}
  .widget_shopping_cart .buttons a {color:#fff;padding:5px 10px 5px 10px;}
-li.empty.cart  {background: url(images/shopping-cart-big.png) no-repeat 10px 10px;height:40px;padding:20px 0 0 60px;}
+li.empty.cart  {background: url(/images/shopping-cart-big.png) no-repeat 10px 10px;height:40px;padding:20px 0 0 60px;}
 .widget_shopping_cart .total {border:none;}
 .widget_shopping_cart .total .amount {float:right;color:#fff !important;padding:0px 3px 0 3px;}
 
