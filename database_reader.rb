@@ -12,12 +12,12 @@ class DatabaseReader
     DB["SELECT * FROM #{table_name}"].all
   end
 
-  def select_by_name(name)
-    DB["SELECT * FROM #{table_name} WHERE name = '#{name}'"].first
+  def select_all_by_region(region)
+    DB["SELECT * FROM #{table_name} WHERE region = '#{region}'"].all
   end
 
-  def select_by_region(region)
-    DB["SELECT * FROM #{table_name} WHERE region = '#{region}'"].first
+  def select_by_name(name)
+    DB["SELECT * FROM #{table_name} WHERE name = '#{name}'"].first
   end
 
   def select_by_type(type)
