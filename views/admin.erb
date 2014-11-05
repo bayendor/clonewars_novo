@@ -25,8 +25,8 @@
   <% @products.each do |product| %>
   <ul>
     <li><%= product[:name] %></li>
-    <li><a href="/<%= product[:id] %>/edit">Edit</a></li>
-    <li><form action="<%= product[:id] %>" method='POST'>
+    <li><a href="/<%= product[:id] %>/edit">edit</a>
+    <form action="<%= product[:id] %>" method='POST'>
         <input type='hidden' name='_method' value='DELETE'>
         <input type='submit' value='Delete'>
        </form></br>

@@ -22,7 +22,7 @@
                   <div class="usercontent"><div class="woocommerce">
 <div class="wooLogin">
 <h2>Edit Product</h2>
-<%= @product.inspect %>
+<%# @product.inspect %>
     <form action="/<%= @product[:id] %>/edit-product" method="POST" class="login">
     <input type="hidden" name="_method" value="PUT" />
       <input type="text" class="input-text" name="product[name]" value="<%= @product[:name] %>" />
@@ -37,11 +37,12 @@
         <option value="<%= option %>" <%= option == @product[:region] ? "selected" : "" %>><%= option %></option>
         <% end %>
       </select>
-      <textarea class="form-control" rows="5" class="input-text" id="order_comments" name="product[description]"><%= @product[:description] %></textarea>
+      <textarea class="form-control" rows="4" cols="120" class="input-text" id="order_comments" name="product[description]"><%= @product[:description] %></textarea>
       <!-- <form action="" method="POST" enctype="multipart/form-data">
             <input type="file" name="file">
             <input type="submit" value="Upload image">
         </form> -->
+      </br>
       <input type='submit' class="" value="Submit"/>
     </form>
 <div class="clear"></div>
