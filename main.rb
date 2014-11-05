@@ -70,6 +70,7 @@ get '/admin/?' do
 end
 
 get '/:id/edit/?' do |id|
+  protected!
   @product = DatabaseReader.new(:products).select_by_id(id.to_i)
   erb :edit_product
 end
