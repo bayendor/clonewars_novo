@@ -27,6 +27,10 @@ module NovoHelpers
     PRODUCTS.select_all_by_type("accessories")
   end
 
+  def find_subscriptions
+    PRODUCTS.select_all_by_type("subscription")
+  end
+
   def find_by_id(id)
     PRODUCTS.select_by_id(id)
   end

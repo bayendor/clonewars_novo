@@ -28,7 +28,7 @@
       <input type="text" class="input-text" name="product[name]" value="<%= @product[:name] %>" />
       <input type="text" class="input-text" name="product[price]" value="<%= @product[:price] %>" />
       <select name='product[type]' class="country_to_state country_select" >
-        <% %w(Espresso Decaf Blend Regular Accessory Subscription).each do |option| %>
+        <% %w(Espresso Decaf Blend Regular Accessories Subscription).each do |option| %>
         <option value="<%= option.downcase %>" <%= option.downcase == @product[:type] ? "selected" : "" %>><%= option %></option>
         <% end %>
       </select>

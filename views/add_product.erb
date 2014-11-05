@@ -24,7 +24,7 @@
       <input type="text" class="input-text" name="product[name]" placeholder="Enter Title" />
       <input type="text" class="input-text" name="product[price]" placeholder="Enter Price" />
       <select name='product[type]' class="country_to_state country_select" >
-        <% %w(Espresso Decaf Blend Regular Accessory Subscription).each do |option| %>
+        <% %w(Espresso Decaf Blend Regular Accessories Subscription).each do |option| %>
         <option value="<%= option.downcase %>"<%= option.downcase %>><%= option %></option>
         <% end %>
       </select>
@@ -38,6 +38,7 @@
             <input type="file" name="file">
             <input type="submit" value="Upload image">
         </form> -->
+      <input type="hidden" name="product[img]" value="Novo-Glenarm-Opening-High-res019.jpg">
       <input type='submit' class="" value="Submit"/>
     </form>
 <div class="clear"></div>
