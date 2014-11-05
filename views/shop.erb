@@ -31,7 +31,7 @@
 									<h2 class="shop_title africa">
 										<span>Africa</span>
 									</h2>
-										<% african_products.each do |product| %>
+										<% @african_products.each do |product| %>
 										<div class="productR">
 											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
@@ -56,7 +56,7 @@
 										<span>
 											Central America										</span>
 									</h2>
-										<% central_am_products.each do |product| %>
+										<% @central_am_products.each do |product| %>
 										<div class="productR">
 											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
@@ -82,7 +82,7 @@
 										<span>
 											Pacific										</span>
 									</h2>
-									<% pacific_products.each do |product| %>
+									<% @pacific_products.each do |product| %>
 										<div class="productR">
 											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
@@ -109,7 +109,7 @@
 											Espressos/ Blends/ Decaf										</span>
 									</h2>
 
-									<% alternative_products.each do |product| %>
+									<% @alternative_products.each do |product| %>
 										<div class="productR">
 											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
@@ -137,7 +137,7 @@
 											Accessories &amp; Merchandise										</span>
 									</h2>
 
-									<% accessories.each do |product| %>
+									<% @accessories.each do |product| %>
 										<div class="productR">
 											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
