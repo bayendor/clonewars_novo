@@ -49,18 +49,22 @@ helpers do
   end
 end
 
+before do 
+  @products             = find_products
+  @african_products     = find_african_products
+  @central_am_products  = find_central_am_products
+  @south_am_products    = find_central_am_products
+  @pacific_products     = find_pacific_products
+  @alternative_products = find_alternative_products
+  @accessories          = find_accessories
+end
+
 get '/' do
   erb :home
 end
 
 get '/shop/?' do
-	erb :shop, locals: {african_products: find_african_products, 
-                      central_am_products: find_central_am_products,
-                      south_am_products: find_central_am_products,
-                      pacific_products: find_pacific_products,
-                      alternative_products: find_alternative_products,
-                      accessories: find_accessories
-                    }
+	erb :shop
 end
 
 get '/:id/detail/?' do |id|
@@ -70,7 +74,6 @@ end
 
 get '/admin/?' do
   protected!
-  @products = find_products
   erb :admin
 end
 
