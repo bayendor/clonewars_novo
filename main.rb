@@ -23,7 +23,7 @@ get '/' do
   erb :home
 end
 
-get '/shop' do
+get '/shop/?' do
   @african_products = DatabaseReader.new(:products).select_all_by_region("Africa")
   @central_am_products = DatabaseReader.new(:products).select_all_by_region("Central America")
   @south_am_products = DatabaseReader.new(:products).select_all_by_region("South America")
@@ -31,39 +31,39 @@ get '/shop' do
 	erb :shop
 end
 
-get '/:id/detail' do |id|
+get '/:id/detail/?' do |id|
   @idea = DatabaseReader.new(:products).select_by_type(id.to_i)
 	erb :detail
 end
 
-get '/admin' do
+get '/admin/?' do
   protected!
   @products = DatabaseReader.new(:products).select_all
   erb :admin
 end
 
-get '/:id/edit' do |id|
+get '/:id/edit/?' do |id|
   @idea = DatabaseReader.new(:products).select_by_type(id.to_i)
   erb :edit_product
 end
 
-get '/contact-locations' do
+get '/contact-locations/?' do
   erb :contact
 end
 
-get '/about' do
+get '/about/?' do
   erb :about
 end
 
-get '/wholesale' do
+get '/wholesale/?' do
   erb :wholesale
 end
 
-get '/my-account' do
+get '/my-account/?' do
   erb :my_account
 end
 
-get '/lost-password' do
+get '/lost-password/?' do
   erb :lost_password
 end
 
@@ -86,5 +86,5 @@ end
 def authorized?
   @auth ||= Rack::Auth::Basic::Request.new(request.env)
   @auth.provided? && @auth.basic? &&
-  @auth.credentials && @auth.credentials == ['username', 'password']
+  @auth.credentials && @auth.credentials == ['novo', 'c0ff33']
 end
