@@ -1,0 +1,58 @@
+<body class="page page-id-5184 page-parent page-template-default woocommerce-account woocommerce-page">
+
+  <%= erb :_navigation %>
+
+<div class = "outerpagewrap">
+  <div class="pagewrap" style="background: #332822 url(https://novocoffee.com/images/hero_slim_wholesale.jpg) no-repeat center center;">
+    <div class="pagecontent">
+      <div class="pagecontentContent">
+        <h1>Site Admin</h1>
+        <!-- <p></p> -->
+      </div>
+      <!-- <div class="homeIcon"><a href=""></a></div> -->
+    </div>
+  </div>
+</div>
+<div id="mainwrap">
+  <div id="main" class="clearfix">
+  <div class="pad"></div>
+          <div class="content fullwidth">
+              <div class="postcontent">
+                <div class="posttext">
+                  <div class="usercontent"><div class="woocommerce">
+<div class="wooLogin">
+<h3>Create a new product</h3>
+  <a href="/add_product">Click here</a></li>
+</div>
+<div class="wooLogin">
+<h3>Products</h3>
+  <% @products.each do |product| %>
+  <ul>
+<<<<<<< HEAD
+    <li><%= product[:name] %></li>
+    <li><a href="/<%= product[:id] %>/edit">edit</a>
+    <form action="<%= product[:id] %>" method='POST'>
+=======
+    <li><%= product[:name] %> | <%= product[:type] %> </li>
+    <li><a href="/<%= product[:id] %>/edit">Edit</a></li>
+    <li><form action="<%= product[:id] %>" method='POST'>
+>>>>>>> some more optimizations
+        <input type='hidden' name='_method' value='DELETE'>
+        <input type='submit' value='Delete'>
+       </form></br>
+    </li>
+  </ul>
+  <% end %>
+</div>
+
+ </p>
+<div class="clear"></div>
+</p></form>
+</p></div>
+</div>
+</div>
+                </div>
+              </div>
+          </div>
+  </div>
+</div>
