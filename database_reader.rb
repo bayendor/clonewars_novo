@@ -29,7 +29,7 @@ class DatabaseReader
   end
 
   def select_all_by_that_are_not(*types)
-    not_types = types.map { |type| "type <> '#{type}'" }.join(" OR ")
+    not_types = types.map { |type| "type <> '#{type}'" }.join(" AND ")
     DB["SELECT * FROM #{table_name} WHERE #{not_types}"].all
   end
 
