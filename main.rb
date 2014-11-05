@@ -24,10 +24,15 @@ get '/' do
 end
 
 get '/shop' do
+  @african_products = DatabaseReader.new(:products).select_all_by_region("Africa")
+  @central_am_products = DatabaseReader.new(:products).select_all_by_region("Central America")
+  @south_am_products = DatabaseReader.new(:products).select_all_by_region("South America")
+  @pacific_products = DatabaseReader.new(:products).select_all_by_region("Pacific")
 	erb :shop
 end
 
-get '/product-detail' do
+get '/:id/detail' do |id|
+  @idea = DatabaseReader.new(:products).select_by_type(id.to_i)
 	erb :detail
 end
 

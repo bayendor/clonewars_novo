@@ -29,386 +29,80 @@
 						<a href="/subscriptions/" class="monthly_subscription_orange">Sign Up for a Monthly Coffee Subscription</a>
 
 									<h2 class="shop_title africa">
-										<span>
-											Africa										</span>
+										<span>Africa</span>
 									</h2>
-
-
+										<% @african_products.each do |product| %>
 										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/kiamwangi/" title="Kiamwangi">
+											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
 														<div class="image">
-															<div class="loading"></div>
-															<img src="images/Kiamwangi1.png" >														</div>
+															<div class="loading"> 
+															</div>
+															<img src="images/<%= product[:img] %>" > 
+														</div>
 													</div>
 												</a>
 													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/kiamwangi/" title="Kiamwangi"> Kiamwangi </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;20</span></span></h3>
+														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount"><%= product[:price] %></span></span></h3>
 													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/kiamwangi/" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
+													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
 													</div>
-
 												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/ritual-chocolate-anyetsu-bar/" title="Ritual Chocolate Anyetsu Bar">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/ritual-chocolate-bar.jpg" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/ritual-chocolate-anyetsu-bar/" title="Ritual Chocolate Anyetsu Bar"> Ritual Chocolate Anyetsu Bar </a></h3>
-														<h3 class="category"><span class="price"><span class="amount">&#36;6.75</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="/shop/?add-to-cart=6892" rel="nofollow" data-product_id="6892" class="add_to_cart_button button product_type_simple">Add to cart</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/belekatu/" title="Belekatu &#8211; Out Of Stock">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/belekatu.web_.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/belekatu/" title="Belekatu &#8211; Out Of Stock"> Belekatu &#8211; Out Of Stock </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;16</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/belekatu/" class="button">Read More</a>
-
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/anyetsu/" title="Anyetsu">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="africa_anyetsu.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/anyetsu/" title="Anyetsu"> Anyetsu </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;16</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/anyetsu/" rel="nofollow" data-product_id="5851" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/novo-decaf-espresso/" title="Novo Decaf Espresso">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/africa_novo-decaf-espresso.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/novo-decaf-espresso/" title="Novo Decaf Espresso"> Novo Decaf Espresso </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;14.50</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/novo-decaf-espresso/" rel="nofollow" data-product_id="5983" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/anyetsu-espresso/" title="Anyetsu Espresso">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/africa_anyetsu-espresso.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/anyetsu-espresso/" title="Anyetsu Espresso"> Anyetsu Espresso </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;16</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/anyetsu-espresso/" rel="nofollow" data-product_id="5977" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/novo-decaf/" title="Novo Decaf">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/africa_novo-decaf.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/novo-decaf/" title="Novo Decaf"> Novo Decaf </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;14.50</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/novo-decaf/" rel="nofollow" data-product_id="5965" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/hachira/" title="Hachira">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/africa_hachira.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/hachira/" title="Hachira"> Hachira </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;28</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/hachira/" rel="nofollow" data-product_id="5922" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
+											</div>
+											<% end %>
 
 									<h2 class="shop_title central-america">
 										<span>
 											Central America										</span>
 									</h2>
-
-
+										<% @central_am_products.each do |product| %>
 										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/el-aguila-bourbon/" title="El Aguila Bourbon">
+											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
 														<div class="image">
-															<div class="loading"></div>
-															<img src="images/Bourbon_website1.png" >														</div>
+															<div class="loading"> 
+															</div>
+															<img src="images/<%= product[:img] %>" > 
+														</div>
 													</div>
 												</a>
 													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/el-aguila-bourbon/" title="El Aguila Bourbon"> El Aguila Bourbon </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;16</span></span></h3>
+														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount"><%= product[:price] %></span></span></h3>
 													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/el-aguila-bourbon/" rel="nofollow" data-product_id="7785" class="add_to_cart_button button product_type_variable">View Details</a>
+													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
 													</div>
-
 												</div>
-																					</div>
+											</div>
+											<% end %>
 
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/el-aguila-pacamara/" title="El Aguila Pacamara">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/Pacamara_website1.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/el-aguila-pacamara/" title="El Aguila Pacamara"> El Aguila Pacamara </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;18</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/el-aguila-pacamara/" rel="nofollow" data-product_id="7782" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/ojo-de-agua-2/" title="Ojo de Agua">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/OjoDeAgua.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/ojo-de-agua-2/" title="Ojo de Agua"> Ojo de Agua </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;14</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/ojo-de-agua-2/" rel="nofollow" data-product_id="7434" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/fincaisnul/" title="Finca Isnul">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/FincaIsnul1.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/fincaisnul/" title="Finca Isnul"> Finca Isnul </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;14</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/fincaisnul/" class="button">Read More</a>
-
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/4mujere/" title="4 Mujeres">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/4mujeres1.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/4mujere/" title="4 Mujeres"> 4 Mujeres </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;15</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/4mujere/" rel="nofollow" data-product_id="6762" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/hartmann-honey/" title="Hartmann Honey">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/HarmannHoney.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/hartmann-honey/" title="Hartmann Honey"> Hartmann Honey </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;15</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/hartmann-honey/" rel="nofollow" data-product_id="6541" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/hartmann-geisha/" title="Hartmann Geisha">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/geisha.web_2.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/hartmann-geisha/" title="Hartmann Geisha"> Hartmann Geisha </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;32</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/hartmann-geisha/" rel="nofollow" data-product_id="6534" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/el-banco/" title="El Banco">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/ca-el_banco.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/el-banco/" title="El Banco"> El Banco </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;16</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/el-banco/" class="button">Read More</a>
-
-													</div>
-
-												</div>
-																					</div>
-
-										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/mundani/" title="Mundani">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading"></div>
-															<img src="images/ca_mundani.png" >														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/mundani/" title="Mundani"> Mundani </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;14.50</span></span></h3>
-													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/mundani/" class="button">Read More</a>
-
-													</div>
-
-												</div>
-																					</div>
 
 									<h2 class="shop_title pacific">
 										<span>
 											Pacific										</span>
 									</h2>
-
-
+									<% @pacific_products.each do |product| %>
 										<div class="productR">
-											<div class="one_third" >												<a href="http://novocoffee.com/product/ulos-batak/" title="Ulos Batak">
+											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
 													<div class="recentimage">
 														<div class="image">
-															<div class="loading"></div>
-															<img src="images/pacific_ulos-batak.png" >														</div>
+															<div class="loading"> 
+															</div>
+															<img src="images/<%= product[:img] %>" > 
+														</div>
 													</div>
 												</a>
 													<div class="recentdescription">
-																												<h3><a href="http://novocoffee.com/product/ulos-batak/" title="Ulos Batak"> Ulos Batak </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">&#36;15</span></span></h3>
+														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount"><%= product[:price] %></span></span></h3>
 													</div>
-													<div class="recentCart">
-
-	<a href="http://novocoffee.com/product/ulos-batak/" rel="nofollow" data-product_id="5938" class="add_to_cart_button button product_type_variable">View Details</a>
+													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
 													</div>
-
 												</div>
-																					</div>
+											</div>
+											<% end %>
+
 
 									<h2 class="shop_title espressosblendsdecaf">
 										<span>
