@@ -28,8 +28,9 @@ class DatabaseReader
     DB["SELECT * FROM #{table_name} WHERE type = '#{type}'"].all
   end
 
-  def select_all_by_that_are_not(type)
-    DB["SELECT * FROM #{table_name} WHERE type <> '#{type}'"].all
+  def select_all_by_that_are_not(*types)
+    not_types = types.map { |type| "type <> '#{type}'" }.join(" OR ")
+    DB["SELECT * FROM #{table_name} WHERE #{not_types}"].all
   end
 
   def select_by_id(id)
