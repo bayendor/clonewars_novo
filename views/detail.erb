@@ -52,9 +52,9 @@
 				<div class="rowSP">
 					<div class="label"><label for="pa_size">Price</label>
 					</div>
-					<div class="value">
-						<p>$<%= sprintf("%.2f", @product[:price]/100.0) %></p>
-					</div>
+					<span class="price">
+						<span class="amount">$<%= sprintf("%.2f", @product[:price]/100.0) %></span>
+					</span>
 				</div>
 
 				<div class="rowSP">
