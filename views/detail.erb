@@ -41,10 +41,19 @@
 					</div>
 					<div class="value">
 						<select id="pa_size" name="attribute_pa_size">
+							<% if ["regular", "decaf", "espresso", "espresso blend", "blend"].include?(@product[:type]) %>
 							<option value="" selected='selected'>Choose an option&hellip;</option>
-							<option value="180-ml" >180 mL</option>
-							<option value="350-ml" >350 mL</option>
-							<option value="75-ml" >75 mL</option>
+								<option >12 oz</option>
+								<option >2 lb</option>
+								<option >4 lb</option>
+							<% elsif "accessories".include?(@product[:type]) %>
+								<option >Small</option>
+								<option >Large</option>
+							<% else "accessories".include?(@product[:type]) %>
+								<option >3 Months</option>
+								<option >6 Months</option>
+								<option >1 Year</option>
+							<% end %>
 						</select>
 					</div>
 				</div>
