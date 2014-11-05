@@ -3,6 +3,8 @@ require 'sinatra/reloader' if development?
 require 'sequel'
 require_relative 'database_reader'
 
+PRODUCTS = DatabaseReader.new(:products).select_all
+
 configure :development do
   DB = Sequel.sqlite('db/novocoffee.db')
 end
@@ -13,39 +15,39 @@ end
 
 helpers do
   def find_products
-    DatabaseReader.new(:products).select_all
+    PRODUCTS.select_all
   end
 
   def find_african_products
-    DatabaseReader.new(:products).select_all_by_region("Africa")
+    PRODUCTS.select_all_by_region("Africa")
   end
 
   def find_central_am_products
-    DatabaseReader.new(:products).select_all_by_region("Central America")
+    PRODUCTS.select_all_by_region("Central America")
   end
 
   def find_south_am_products
-    DatabaseReader.new(:products).select_all_by_region("South America")
+    PRODUCTS.select_all_by_region("South America")
   end
 
   def find_pacific_products
-    DatabaseReader.new(:products).select_all_by_region("Pacific")
+    PRODUCTS.select_all_by_region("Pacific")
   end
 
   def find_alternative_products
-    DatabaseReader.new(:products).select_all_by_that_are_not("regular", "accessories", "subscription")
+    PRODUCTS.select_all_by_that_are_not("regular", "accessories", "subscription")
   end
 
   def find_accessories
-    DatabaseReader.new(:products).select_all_by_type("accessories")
+    PRODUCTS.select_all_by_type("accessories")
   end
 
   def update_product(id, params)
-    DatabaseReader.new(:products).update(id, params)
+    PRODUCTS.update(id, params)
   end
 
   def delete_product(id)
-    DatabaseReader.new(:products).delete(id)
+    PRODUCTS.delete(id)
   end
 end
 
