@@ -1,14 +1,15 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sequel'
-
-# configure :development do
-#   DB = Sequel.sqlite('db/novocoffee.db')
-# end
+require_relative 'database_reader'
 
 configure :development do
-  DB = Sequel.connect('postgres://localhost/novocoffee')
+  DB = Sequel.sqlite('db/novocoffee.db')
 end
+
+# configure :development do
+#   DB = Sequel.connect('postgres://localhost/novocoffee')
+# end
 
 configure :production do
   DB = Sequel.connect(ENV['DATABASE_URL'])
@@ -31,10 +32,12 @@ get '/product-detail' do
 end
 
 get '/admin' do
+  @products = DatabaseReader.new(:products).select_all
   erb :admin
 end
 
-get '/edit-product' do
+get '/:id/edit' do |id|
+  @idea = DatabaseReader.new(:products).select_by_type(id.to_i)
   erb :edit_product
 end
 

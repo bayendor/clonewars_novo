@@ -1,7 +1,7 @@
 require 'sequel'
 
 class DatabaseReader
-  # DB = Sequel.sqlite('db/novocoffee.db')
+  DB = Sequel.sqlite('db/novocoffee.db')
 
   attr_reader :table_name
   def initialize(table_name)
@@ -23,6 +23,11 @@ class DatabaseReader
   def select_by_type(type)
     DB["SELECT * FROM #{table_name} WHERE type = '#{type}'"].first
   end
+
+  def select_by_type(id)
+    DB["SELECT * FROM #{table_name} WHERE id = \"#{id}\""].first
+  end
+
 
   def random(num)
     select_all.sample(num)

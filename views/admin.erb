@@ -21,12 +21,17 @@
                 <div class="posttext">
                   <div class="usercontent"><div class="woocommerce">
 <div class="wooLogin">
-<h2>Products</h2>
+<h3>Products</h3>
+  <% @products.each do |product| %>
   <ul>
-    <li>Product name 1 | Edit link</li>
-    <li>Product name 2 | Edit link</li>
-    <li>Create a new product link</li>
+    <li><%= product[:name] %></li>
+    <li><a href="/<%= product[:id] %>/edit">Edit Product</a></li></br>
   </ul>
+  <% end %>
+</div>
+<div class="wooLogin">
+<h3>Create a new product</h3>
+ </p> 
 <div class="clear"></div>
 </p></form>
 </p></div>
