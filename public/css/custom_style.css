@@ -677,7 +677,7 @@ a.monthly_subscription{
 a.monthly_subscription:after{
 	margin: -12px 0 0 30px;
 	position: absolute;
-/*  content: url('images/big_arrow.png');*/
+  content: url('/images/big_arrow.png');
 }
 
 
