@@ -3693,8 +3693,8 @@ animation-delay: 2.0s;}
 .textSlide h3{list-style:none; font-size:18px;}
 .nextbutton { overflow: hidden; padding: 0; position: absolute; top: 308px; left:50%; margin-left: 560px; cursor: pointer; display: none; width: 40px; height: 50px; z-index:100 }
 .prevbutton { overflow: hidden; padding: 0; position: absolute; top: 308px; left:50%; margin-left: -620px; cursor: pointer; display: none; width: 40px; height: 50px; z-index:100  }
-.nextbutton { width: 60px; height: 60px;  background: url(images/slideshowArrows.png) no-repeat -60px 0;}
-.prevbutton { width: 60px; height: 60px;  background: url(images/slideshowArrows.png) no-repeat; }
+.nextbutton { width: 60px; height: 60px;  background: url(/images/slideshowArrows.png) no-repeat -60px 0;}
+.prevbutton { width: 60px; height: 60px;  background: url(/images/slideshowArrows.png) no-repeat; }
 
 .anythingSlider .start-stop { display: none !important }
 .anythingSlider .anythingWindow { overflow: hidden; position: relative; width: 100%; height: 100%; }
