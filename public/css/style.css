@@ -90,7 +90,7 @@ BEGIN CUSTOM STYLES
 }
 
 body {
-	background:#ffffff url(/wp-content/themes/mercor/images/bg/bg.jpg) repeat 0 0  !important;
+	background:#ffffff url(/images/bg.jpg) repeat 0 0  !important;
 	color:#332822;
 	font-size:16px;
 	letter-spacing:normal;
