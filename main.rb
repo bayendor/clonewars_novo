@@ -98,7 +98,7 @@ get '/subscriptions/?' do
   erb :subscriptions
 end
 
-get '/add_product/?' do 
+get '/add_product/?' do
   protected!
   erb :add_product
 end
@@ -107,6 +107,11 @@ post '/add_product/?' do
   PRODUCTS.add(params['product'])
   redirect '/admin'
 end
+
+get '/sign-up-for-a-cupping/?' do
+  erb :cupping
+end
+
 # private
 
 def protected!
