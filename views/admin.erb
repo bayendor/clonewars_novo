@@ -21,12 +21,16 @@
                 <div class="posttext">
                   <div class="usercontent"><div class="woocommerce">
 <div class="wooLogin">
+<h3>Create a new product</h3>
+  <a href="/add_product">Click here</a></li>
+</div>
+<div class="wooLogin">
 <h3>Products</h3>
   <% @products.each do |product| %>
   <ul>
-    <li><%= product[:name] %></li>
-    <li><a href="/<%= product[:id] %>/edit">edit</a>
-    <form action="<%= product[:id] %>" method='POST'>
+    <li><%= product[:name] %> | <%= product[:type] %> </li>
+    <li><a href="/<%= product[:id] %>/edit">Edit</a></li>
+    <li><form action="<%= product[:id] %>" method='POST'>
         <input type='hidden' name='_method' value='DELETE'>
         <input type='submit' value='Delete'>
        </form></br>
@@ -34,8 +38,7 @@
   </ul>
   <% end %>
 </div>
-<div class="wooLogin">
-<h3>Create a new product</h3>
+
  </p>
 <div class="clear"></div>
 </p></form>
