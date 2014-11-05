@@ -37,6 +37,7 @@ get '/:id/detail' do |id|
 end
 
 get '/admin' do
+  protected!
   @products = DatabaseReader.new(:products).select_all
   erb :admin
 end
@@ -72,4 +73,18 @@ end
 
 get '/news-events/?' do
   erb :news
+end
+
+# private
+
+def protected!
+  return if authorized?
+  headers['WWW-Authenticate'] = 'Basic realm="Restricted Area"'
+  halt 401, "Not authorized\n"
+end
+
+def authorized?
+  @auth ||= Rack::Auth::Basic::Request.new(request.env)
+  @auth.provided? && @auth.basic? &&
+  @auth.credentials && @auth.credentials == ['username', 'password']
 end
