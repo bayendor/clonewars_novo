@@ -2,20 +2,48 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sequel'
 require_relative 'database_reader'
-require_relative 'novo_helpers'
-
 
 configure :development do
   DB = Sequel.sqlite('db/novocoffee.db')
-  PRODUCTS = DatabaseReader.new(:products)
 end
 
 configure :production do
   DB = Sequel.connect(ENV['DATABASE_URL'])
-  PRODUCTS = DatabaseReader.new(:products)
 end
 
-helpers NovoHelpers
+helpers do
+  def find_products
+    DatabaseReader.new(:products).select_all
+  end
+
+  def find_african_products
+    DatabaseReader.new(:products).select_all_by_region("Africa")
+  end
+
+  def find_central_am_products
+    DatabaseReader.new(:products).select_all_by_region("Central America")
+  end
+
+  def find_south_am_products
+    DatabaseReader.new(:products).select_all_by_region("South America")
+  end
+
+  def find_pacific_products
+    DatabaseReader.new(:products).select_all_by_region("Pacific")
+  end
+
+  def find_alternative_products
+    DatabaseReader.new(:products).select_all_by_that_are_not("regular", "accessories", "subscription")
+  end
+
+  def find_accessories
+    DatabaseReader.new(:products).select_all_by_type("accessories")
+  end
+
+  def update_product(id, params)
+    DatabaseReader.new(:products).update(id, params)
+  end
+end
 
 before do
   @products             = find_products
@@ -28,7 +56,7 @@ before do
 end
 
 get '/' do
-  @featured_products = PRODUCTS.random(3)
+  @featured_products = DatabaseReader.new(:products).random(3)
   erb :home
 end
 
@@ -37,8 +65,8 @@ get '/shop/?' do
 end
 
 get '/:id/detail/?' do |id|
-  @product = find_by_id(id)
-  @featured_products = PRODUCTS.random(3)
+  @product = DatabaseReader.new(:products).select_by_id(id)
+  @featured_products = DatabaseReader.new(:products).random(3)
 	erb :detail
 end
 
@@ -49,7 +77,7 @@ end
 
 get '/:id/edit/?' do |id|
   protected!
-  @product = find_by_id(id)
+  @product = DatabaseReader.new(:products).select_by_id(id)
   erb :edit_product
 end
 
@@ -81,31 +109,18 @@ get '/news-events/?' do
   erb :news
 end
 
+<<<<<<< HEAD
 put '/:id/edit-product/?' do |id|
   protected!
   update_product(id, params['product'])
   redirect '/admin'
-end
-
-delete '/:id/?' do |id|
-  protected!
-  delete_product(id)
-  redirect '/admin'
-end
-
-get '/subscriptions/?' do
-  @subscriptions = PRODUCTS.select_all_by_type("subscription")
+=======
+get '/subscriptions/?' do 
+  @subscriptions = DatabaseReader.new(:products).select_all_by_type("subscription")
   erb :subscriptions
+>>>>>>> added dynamic subscriptions view
 end
 
-get '/add_product/?' do 
-  erb :add_product
-end
-
-post '/add_product/?' do
-  DatabaseReader.new(:products).add(params['product'])
-  redirect '/'
-end
 # private
 
 def protected!
