@@ -21,7 +21,15 @@ class DatabaseReader
   end
 
   def select_by_type(type)
-    DB["SELECT * FROM #{table_name} WHERE type = '#{type}'"].first
+    DB["SELECT * FROM #{table_name} WHERE type = '#{type1}'"].first
+  end
+
+  def select_all_by_type(type)
+    DB["SELECT * FROM #{table_name} WHERE type = '#{type}'"].all
+  end
+
+  def select_all_by_that_are_not(type)
+    DB["SELECT * FROM #{table_name} WHERE type <> '#{type}'"].all
   end
 
   def select_by_type(id)
