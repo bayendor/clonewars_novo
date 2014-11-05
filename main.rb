@@ -81,6 +81,10 @@ get '/news-events/?' do
   erb :news
 end
 
+get '/team/?' do
+  erb :team
+end
+
 put '/:id/edit-product/?' do |id|
   protected!
   update_product(id, params['product'])
