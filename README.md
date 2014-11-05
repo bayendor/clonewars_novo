@@ -7,3 +7,4 @@ In this project you’ll take a client’s website and rebuild it as a Sinatra a
 
 Original site http://novocoffee.com
 
+Cloned site: https://novo-1409-clone.herokuapp.com
