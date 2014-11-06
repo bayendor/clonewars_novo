@@ -30,7 +30,7 @@
   <ul>
     <li><%= product[:name] %> | <%= product[:type] %> </li>
     <li><a href="/<%= product[:id] %>/edit">Edit</a></li>
-    <li><form action="<%= product[:id] %>" method='POST'>
+    <li><form action="/<%= product[:id] %>" method='POST'>
         <input type='hidden' name='_method' value='DELETE'>
         <input type='submit' value='Delete'>
        </form></br>
