@@ -1,175 +1,175 @@
 
 <body class="archive post-type-archive post-type-archive-product woocommerce woocommerce-page">
-	<%= erb :_navigation %>
+  <%= erb :_navigation %>
 
-	<div class = "outerpagewrap">
-					<div class="pagewrap" style="background: #332822 url(/images/hero_slim_wholesale.jpg) no-repeat center center;">
-					<div class="pagecontent">
-				<div class="pagecontentContent">
-					<h1>
-													Shop
-					</h1>
-					<p></p>
-				</div>
+  <div class = "outerpagewrap">
+          <div class="pagewrap" style="background: #332822 url(/images/hero_slim_wholesale.jpg) no-repeat center center;">
+          <div class="pagecontent">
+        <div class="pagecontentContent">
+          <h1>
+                          Shop
+          </h1>
+          <p></p>
+        </div>
 
-				<!-- <div class="homeIcon"><a href=""></a></div> -->
+        <!-- <div class="homeIcon"><a href=""></a></div> -->
 
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 
-	<div id="mainwrap" class="homewrap">
-		<div id="main" class="clearfix">
+  <div id="mainwrap" class="homewrap">
+    <div id="main" class="clearfix">
 
-				<div class="homeRacent">
-					<div class="wocategoryFull">
+        <div class="homeRacent">
+          <div class="wocategoryFull">
 
-						<a href="/subscriptions/" class="monthly_subscription_orange">Sign Up for a Monthly Coffee Subscription</a>
+            <a href="/subscriptions/" class="monthly_subscription_orange">Sign Up for a Monthly Coffee Subscription</a>
 
-									<h2 class="shop_title africa">
-										<span>Africa</span>
-									</h2>
-										<% @african_products.each do |product| %>
-										<div class="productR">
-											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading">
-															</div>
-															<img src="/images/<%= product[:img] %>" >
-														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
-													</div>
-													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-												</div>
-											</div>
-											<% end %>
+                  <h2 class="shop_title africa">
+                    <span>Africa</span>
+                  </h2>
+                    <% @african_products.each do |product| %>
+                    <div class="productR">
+                      <div class="one_third"> <a href="/<%= product[:id] %>/detail">
+                          <div class="recentimage">
+                            <div class="image">
+                              <div class="loading">
+                              </div>
+                              <img src="/images/<%= product[:img] %>" >
+                            </div>
+                          </div>
+                        </a>
+                          <div class="recentdescription">
+                            <h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+                            <h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
+                          </div>
+                          <div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
 
-									<h2 class="shop_title central-america">
-										<span>
-											Central America										</span>
-									</h2>
-										<% @central_am_products.each do |product| %>
-										<div class="productR">
-											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading">
-															</div>
-															<img src="/images/<%= product[:img] %>" >
-														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
-													</div>
-													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-												</div>
-											</div>
-											<% end %>
-
-
-									<h2 class="shop_title pacific">
-										<span>
-											Pacific										</span>
-									</h2>
-									<% @pacific_products.each do |product| %>
-										<div class="productR">
-											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading">
-															</div>
-															<img src="/images/<%= product[:img] %>" >
-														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
-													</div>
-													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-												</div>
-											</div>
-											<% end %>
+                  <h2 class="shop_title central-america">
+                    <span>
+                      Central America                   </span>
+                  </h2>
+                    <% @central_am_products.each do |product| %>
+                    <div class="productR">
+                      <div class="one_third"> <a href="/<%= product[:id] %>/detail">
+                          <div class="recentimage">
+                            <div class="image">
+                              <div class="loading">
+                              </div>
+                              <img src="/images/<%= product[:img] %>" >
+                            </div>
+                          </div>
+                        </a>
+                          <div class="recentdescription">
+                            <h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+                            <h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
+                          </div>
+                          <div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
 
 
-									<h2 class="shop_title espressosblendsdecaf">
-										<span>
-											Espressos/ Blends/ Decaf										</span>
-									</h2>
-
-									<% @alternative_products.each do |product| %>
-										<div class="productR">
-											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading">
-															</div>
-															<img src="/images/<%= product[:img] %>" >
-														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
-													</div>
-													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-												</div>
-											</div>
-											<% end %>
-
-										<div class="blue">
-
-									<h2 class="shop_title accessories-merchandise">
-										<span>
-											Accessories &amp; Merchandise										</span>
-									</h2>
-
-									<% @accessories.each do |product| %>
-										<div class="productR">
-											<div class="one_third"> <a href="/<%= product[:id] %>/detail">
-													<div class="recentimage">
-														<div class="image">
-															<div class="loading">
-															</div>
-															<img src="/images/<%= product[:img] %>" >
-														</div>
-													</div>
-												</a>
-													<div class="recentdescription">
-														<h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
-														<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
-													</div>
-													<div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
-													</div>
-												</div>
-											</div>
-											<% end %>
+                  <h2 class="shop_title pacific">
+                    <span>
+                      Pacific                   </span>
+                  </h2>
+                  <% @pacific_products.each do |product| %>
+                    <div class="productR">
+                      <div class="one_third"> <a href="/<%= product[:id] %>/detail">
+                          <div class="recentimage">
+                            <div class="image">
+                              <div class="loading">
+                              </div>
+                              <img src="/images/<%= product[:img] %>" >
+                            </div>
+                          </div>
+                        </a>
+                          <div class="recentdescription">
+                            <h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+                            <h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
+                          </div>
+                          <div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
 
 
-												</div>
-																					</div>
-										</div>
-															<!-- <div class="categorytopbarWraper">
-								<div class="categorytopbar">
-				</div>
-			</div> -->
-							</div>
+                  <h2 class="shop_title espressosblendsdecaf">
+                    <span>
+                      Espressos/ Blends/ Decaf                    </span>
+                  </h2>
 
-				<!-- <p></p> -->
+                  <% @alternative_products.each do |product| %>
+                    <div class="productR">
+                      <div class="one_third"> <a href="/<%= product[:id] %>/detail">
+                          <div class="recentimage">
+                            <div class="image">
+                              <div class="loading">
+                              </div>
+                              <img src="/images/<%= product[:img] %>" >
+                            </div>
+                          </div>
+                        </a>
+                          <div class="recentdescription">
+                            <h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+                            <h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
+                          </div>
+                          <div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
 
-		</div>
-		</div>
-	</div>
+                    <div class="blue">
+
+                  <h2 class="shop_title accessories-merchandise">
+                    <span>
+                      Accessories &amp; Merchandise                   </span>
+                  </h2>
+
+                  <% @accessories.each do |product| %>
+                    <div class="productR">
+                      <div class="one_third"> <a href="/<%= product[:id] %>/detail">
+                          <div class="recentimage">
+                            <div class="image">
+                              <div class="loading">
+                              </div>
+                              <img src="/images/<%= product[:img] %>" >
+                            </div>
+                          </div>
+                        </a>
+                          <div class="recentdescription">
+                            <h3><a href="/<%= product[:id] %>/detail"> <%= product[:name] %> </a></h3>
+                            <h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
+                          </div>
+                          <div class="recentCart"> <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="7779" class="add_to_cart_button button product_type_variable">View Details</a>
+                          </div>
+                        </div>
+                      </div>
+                      <% end %>
+
+
+                        </div>
+                                          </div>
+                    </div>
+                              <!-- <div class="categorytopbarWraper">
+                <div class="categorytopbar">
+        </div>
+      </div> -->
+              </div>
+
+        <!-- <p></p> -->
+
+    </div>
+    </div>
+  </div>

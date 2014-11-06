@@ -1,126 +1,126 @@
 <body class="single single-product postid-6877 woocommerce woocommerce-page">
-	<%= erb :_navigation %>
+  <%= erb :_navigation %>
 <div class = "outerpagewrap">
-				<div class="pagewrap" style="background: #332822 url(/images/hero_slim_wholesale.jpg) no-repeat center center;">
-				<div class="pagecontent">
-			<div class="pagecontentContent">
-				<h1><a href="/shop/">Shop</a></h1>
-				<p><a href="/">Novo Coffee</a> » <%= @product[:name] %></p>
-			</div>
-		</div>
-	</div>
+        <div class="pagewrap" style="background: #332822 url(/images/hero_slim_wholesale.jpg) no-repeat center center;">
+        <div class="pagecontent">
+      <div class="pagecontentContent">
+        <h1><a href="/shop/">Shop</a></h1>
+        <p><a href="/">Novo Coffee</a> » <%= @product[:name] %></p>
+      </div>
+    </div>
+  </div>
 </div>
-	<div id="mainwrap" class="homewrap">
-		<div id="main" class="clearfix">
-			<div class="content fullwidth">
+  <div id="mainwrap" class="homewrap">
+    <div id="main" class="clearfix">
+      <div class="content fullwidth">
 <div itemscope itemtype="http://schema.org/Product" id="product-6877" class="post-6877 product type-product status-publish hentry instock">
-	<div  class="leftContentSP">
+  <div  class="leftContentSP">
 <div class="imagesSPAll">
-	<div class="images imagesSP">
-	<script type="text/javascript" src="js/detail_page.js"></script>
-	<a href = "/images/<%= @product[:img] %>" rel ="prettyPhoto" ><img class="check" src="/images/<%= @product[:img] %>" /></a>
-		</div>
-		<div class="thumbnails"></div>
+  <div class="images imagesSP">
+  <script type="text/javascript" src="js/detail_page.js"></script>
+  <a href = "/images/<%= @product[:img] %>" rel ="prettyPhoto" ><img class="check" src="/images/<%= @product[:img] %>" /></a>
+    </div>
+    <div class="thumbnails"></div>
 </div>
-	</div>
-	<div class="rightContentSP">
+  </div>
+  <div class="rightContentSP">
 
-	<div class="titleSP">
-		<h2><%= @product[:name] %></h2>
-	</div>
-	<div class="descriptionSP short">
-		<p><%= @product[:description] %></p>
-	</div>
+  <div class="titleSP">
+    <h2><%= @product[:name] %></h2>
+  </div>
+  <div class="descriptionSP short">
+    <p><%= @product[:description] %></p>
+  </div>
 
 <div class="cartPS">
-	<div id="product_box">
-		<form action="/product/espresso-novo-mug-12-oz/?add-to-cart=6877" class="variations_form" method="post" enctype='multipart/form-data' data-product_id="6877">
-			<div class="variations">
-				<div class="rowSP">
-					<div class="label"><label for="pa_size">Size</label>
-					</div>
-					<div class="value">
-						<select id="pa_size" name="attribute_pa_size">
-							<% if ["regular", "decaf", "espresso", "espresso blend", "blend"].include?(@product[:type]) %>
-							<option value="" selected='selected'>Choose an option&hellip;</option>
-								<option >12 oz</option>
-								<option >2 lb</option>
-								<option >4 lb</option>
-							<% elsif "accessories".include?(@product[:type]) %>
-								<option >Small</option>
-								<option >Large</option>
-							<% else "accessories".include?(@product[:type]) %>
-								<option >3 Months</option>
-								<option >6 Months</option>
-								<option >1 Year</option>
-							<% end %>
-						</select>
-					</div>
-				</div>
+  <div id="product_box">
+    <form action="/product/espresso-novo-mug-12-oz/?add-to-cart=6877" class="variations_form" method="post" enctype='multipart/form-data' data-product_id="6877">
+      <div class="variations">
+        <div class="rowSP">
+          <div class="label"><label for="pa_size">Size</label>
+          </div>
+          <div class="value">
+            <select id="pa_size" name="attribute_pa_size">
+              <% if ["regular", "decaf", "espresso", "espresso blend", "blend"].include?(@product[:type]) %>
+              <option value="" selected='selected'>Choose an option&hellip;</option>
+                <option >12 oz</option>
+                <option >2 lb</option>
+                <option >4 lb</option>
+              <% elsif "accessories".include?(@product[:type]) %>
+                <option >Small</option>
+                <option >Large</option>
+              <% else "accessories".include?(@product[:type]) %>
+                <option >3 Months</option>
+                <option >6 Months</option>
+                <option >1 Year</option>
+              <% end %>
+            </select>
+          </div>
+        </div>
 
-				<div class="rowSP">
-					<div class="label"><label for="pa_size">Price</label>
-					</div>
-					<span class="price">
-						<span class="amount">$<%= sprintf("%.2f", @product[:price]/100.0) %></span>
-					</span>
-				</div>
+        <div class="rowSP">
+          <div class="label"><label for="pa_size">Price</label>
+          </div>
+          <span class="price">
+            <span class="amount">$<%= sprintf("%.2f", @product[:price]/100.0) %></span>
+          </span>
+        </div>
 
-				<div class="rowSP">
-					<div class="label"><label for="pa_size">Quantity</label>
-					</div>
-					<div class="quantity">
-						<input  step="1" min="" max="" name="quantity" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12" />
-					</div>
-				</div>
-				<div class="rowSP">
-					<button type="submit" class="single_add_to_cart_button button">Add to cart</button>
-				</div>
-			</div>
-		</form>
-	</div>
+        <div class="rowSP">
+          <div class="label"><label for="pa_size">Quantity</label>
+          </div>
+          <div class="quantity">
+            <input  step="1" min="" max="" name="quantity" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12" />
+          </div>
+        </div>
+        <div class="rowSP">
+          <button type="submit" class="single_add_to_cart_button button">Add to cart</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-		<div class="messageSP">
-		</div>
-	</div>
+    <div class="messageSP">
+    </div>
+  </div>
 </div>
-	</div>
+  </div>
 
-				<div class="homeRacent">
-				<div class="titleborder">
-				</div>
-					<h2 class="section_title">Featured <span>Products</span></h2>
-					<div id="homeRecent" class="productRH">
-					<ul id="productR" class="productR">
+        <div class="homeRacent">
+        <div class="titleborder">
+        </div>
+          <h2 class="section_title">Featured <span>Products</span></h2>
+          <div id="homeRecent" class="productRH">
+          <ul id="productR" class="productR">
 
-						<% @featured_products.each do |product| %>
-						<li>
-							<div class="one_third" >
-							<a href="/<%= product[:id] %>/detail">
-								<div class="recentimage">
-									<div class="image">
-										<div class="loading">
-										</div>
-										<img src="/images/<%= product[:img] %>">										
-									</div>
-								</div>
-							</a>
-								<div class="recentdescription">
-									<h3><a href="/<%= product[:id] %>/detail"><%= product[:name] %></a></h3>
-									<h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
-								</div>
-								<div class="recentCart">
-									<a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="6541" class="add_to_cart_button button product_type_variable">View Details</a>
-								</div>
-							</div>
-							<% end %>
+            <% @featured_products.each do |product| %>
+            <li>
+              <div class="one_third" >
+              <a href="/<%= product[:id] %>/detail">
+                <div class="recentimage">
+                  <div class="image">
+                    <div class="loading">
+                    </div>
+                    <img src="/images/<%= product[:img] %>">
+                  </div>
+                </div>
+              </a>
+                <div class="recentdescription">
+                  <h3><a href="/<%= product[:id] %>/detail"><%= product[:name] %></a></h3>
+                  <h3 class="category"><span class="price"><span class="from">From: </span><span class="amount">$<%= sprintf("%.2f", product[:price]/100.0) %></span></span></h3>
+                </div>
+                <div class="recentCart">
+                  <a href="/<%= product[:id] %>/detail" rel="nofollow" data-product_id="6541" class="add_to_cart_button button product_type_variable">View Details</a>
+                </div>
+              </div>
+              <% end %>
 
-					</ul>
-					</div>
-				</div>
-				<div class="clear">
-				</div>
+          </ul>
+          </div>
+        </div>
+        <div class="clear">
+        </div>
 
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
