@@ -1,9 +1,8 @@
 require 'sequel'
 
 class DatabaseReader
-  # DB = Sequel.sqlite('db/novocoffee.db')
-
   attr_reader :table_name
+
   def initialize(table_name)
     @table_name = table_name
   end
@@ -29,7 +28,7 @@ class DatabaseReader
   end
 
   def select_all_by_that_are_not(*types)
-    not_types = types.map { |type| "type <> '#{type}'" }.join(" AND ")
+    not_types = types.map { |type| "type <> '#{type}'" }.join(' AND ')
     DB["SELECT * FROM #{table_name} WHERE #{not_types}"].all
   end
 
@@ -41,7 +40,7 @@ class DatabaseReader
     select_all.sample(num)
   end
 
-  def all_sizes(product_name)
+  def all_sizes(_product_name)
   end
 
   def delete(id)
@@ -51,13 +50,13 @@ class DatabaseReader
   def update(id, options)
     changed = columns.select { |key| options[key] }
     return if changed.empty?
-    set = changed.map { |key| "#{key} = '#{options[key]}'" }.join ","
+    set = changed.map { |key| "#{key} = '#{options[key]}'" }.join ','
     DB.run "UPDATE #{table_name} SET #{set} where id = #{id}"
   end
 
   def add(options)
     values = columns.map { |column| "'#{options[column]}'" }
-    DB.run "INSERT INTO #{table_name} (#{columns.join ","}) VALUES (#{values.join ","})"
+    DB.run "INSERT INTO #{table_name} (#{columns.join ','}) VALUES (#{values.join ','})"
   end
 
   def columns

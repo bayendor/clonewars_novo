@@ -37,13 +37,13 @@ get '/' do
 end
 
 get '/shop/?' do
-	erb :shop
+  erb :shop
 end
 
 get '/:id/detail/?' do |id|
   @product = find_by_id(id)
   @featured_products = PRODUCTS.random(3)
-	erb :detail
+  erb :detail
 end
 
 get '/admin/?' do
@@ -120,7 +120,7 @@ get '/sign-up-for-a-cupping/?' do
   erb :cupping
 end
 
-# private
+private
 
 def protected!
   return if authorized?
@@ -131,5 +131,5 @@ end
 def authorized?
   @auth ||= Rack::Auth::Basic::Request.new(request.env)
   @auth.provided? && @auth.basic? &&
-  @auth.credentials && @auth.credentials == ['novo', 'c0ff33']
+    @auth.credentials && @auth.credentials == %w(novo c0ff33)
 end
