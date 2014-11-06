@@ -27,7 +27,7 @@
 <div class="wooLogin">
 <h3>Products</h3>
   <% @products.each do |product| %>
-  <ul>
+  <ul class="edit-product">
     <li><%= product[:name] %> | <%= product[:type] %> </li>
     <li><a href="/<%= product[:id] %>/edit">Edit</a></li>
     <li><form action="/<%= product[:id] %>" method='POST'>
