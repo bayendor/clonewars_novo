@@ -1,6 +1,14 @@
 require_relative 'test_helper'
 
 class AdminFeatureTest < FeatureTest
+  def setup
+    @file_contents = File.read("db/test.db")
+  end
+
+  def teardown
+    File.write("db/test.db", @file_contents)
+  end
+
   def login
     page.driver.browser.basic_authorize("novo", "c0ff33")
   end
