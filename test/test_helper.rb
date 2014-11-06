@@ -2,14 +2,12 @@ ENV['RACK_ENV'] = 'test'
 require './main'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'rack/test'
+require 'capybara'
+
+Capybara.app = Sinatra::Application
 
 class FeatureTest < MiniTest::Test
-  include Rack::Test::Methods
-
-  def app
-    CMS
-  end
+  include Capybara::DSL
 
   def assert_ok
     assert last_response.ok?,
@@ -19,5 +17,10 @@ class FeatureTest < MiniTest::Test
   def assert_page_has(content)
     assert last_response.body.include?(content),
            ["Expected this content:", content, "in this response body:", last_response.body.inspect].join("\n")
+  end
+
+  def teardown
+    Capybara.reset_sessions!
+    Capybara.use_default_driver
   end
 end

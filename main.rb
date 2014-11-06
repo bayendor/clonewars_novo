@@ -4,9 +4,13 @@ require 'sequel'
 require_relative 'database_reader'
 require_relative 'novo_helpers'
 
-
 configure :development do
   DB = Sequel.sqlite('db/novocoffee.db')
+  PRODUCTS = DatabaseReader.new(:products)
+end
+
+configure :test do
+  DB = Sequel.sqlite('db/test.db')
   PRODUCTS = DatabaseReader.new(:products)
 end
 

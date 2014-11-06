@@ -1,7 +1,5 @@
 require_relative 'test_helper'
 
-DB = Sequel.sqlite('db/test.db')
-
 class DatabaseReaderTest < Minitest::Test
   def setup
     @reader = DatabaseReader.new("products")
