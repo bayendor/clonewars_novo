@@ -16,7 +16,7 @@ class FeatureTest < MiniTest::Test
 
   def assert_page_has(content)
     assert last_response.body.include?(content),
-           ["Expected this content:", content, "in this response body:", last_response.body.inspect].join("\n")
+           ['Expected this content:', content, 'in this response body:', last_response.body.inspect].join("\n")
   end
 
   def teardown
