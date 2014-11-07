@@ -2800,7 +2800,7 @@ background: url(images/bulletSidebar.png) no-repeat 2px 12px;
 	}
 
 .arrowgototop{
-   background: url(images/goToTopArrow.png) no-repeat;
+   background: url(/images/goToTopArrow.png) no-repeat;
    position: relative;
    left:14px;
    top:16px;
